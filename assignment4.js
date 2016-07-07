@@ -134,19 +134,19 @@ console.log(myCat.speak());
 // STEP 10
 /*
 String.prototype.findWords = function(paragraph, word) {
-    var allWords = paragraph.match(/\S\w*/g);
+    var allWords = paragraph.match(/\S(\w*)/g);
     var num = 0;
     for (var index in allWords) {
-        if (allWords[index] === word) {
+        if (allWords[index].toLowerCase() === word.toLowerCase()) {
             num += 1;
         }
     }
-    alert(num);
+    alert('The number of times the word ' + '"' + word + '"' + ' is found in the following paragraph is ' + num + ':\n\n' + paragraph);
 }
 
-var myParagraph = new String();
+var myParagraph = new String('The practice of writing paragraphs is essential to good writing. Paragraphs help to break up large chunks of text and makes the content easier for readers to digest. They guide the reader through your argument by focusing on one main idea or goal.');
 
-myParagraph.findWords('The practice of writing paragraphs is essential to good writing. Paragraphs help to break up large chunks of text and makes the content easier for readers to digest.', 'writing');
+myParagraph.findWords(myParagraph, 'the');
 */
 
 
@@ -172,6 +172,7 @@ var favRecipe = new Recipe('Guacamole', '4', ingredients);
 
 favRecipe.displayRecipe();
 */
+
 
 // The Reading List ––––––––––––––––––––––––––––––––––––––––––––––––––
 
