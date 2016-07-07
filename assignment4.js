@@ -192,6 +192,7 @@ var book5 = new Book('No Country for Old Men', 'Cormac McCarthy', true);
 var myBooks = [book1, book2, book3, book4, book5];
 
 for (var index in myBooks) {
+    console.log(myBooks[index]._title + ' by ' + myBooks[index]._author);
     if (myBooks[index]._alreadyRead === true) {
         console.log('You already read ' + myBooks[index]._title + ' by ' + myBooks[index]._author);
     } else {
